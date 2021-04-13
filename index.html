@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+    <script src="https://kit.fontawesome.com/22ffc91bdd.js" crossorigin="anonymous"></script>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
+    <title>Quantum Trace</title>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="hamburgers.min.css">
+
+    <link href="http://cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        #mc_embed_signup{background:#fff; clear:left; font:14px "Lucida Console", Monaco, monospace; width:100%;}
+        #mce-EMAIL{padding: 11px; margin: 10px;}
+    </style>
+
+</head>
+
+<body>
+<div class="layout">
+    <main id="content" class="content">
+        <section class="heavy">
+            <div class="container">
+                <div class="col-3">
+                    <div class="hero">
+                        <img src="logos/new-logo.svg" alt="Quantum Trace"/>
+                        <p class="tagline"><b>Tracing A Quantum Path</b></p>
+                        <button id="mobile-menu-icon" class="hamburger hamburger--squeeze" type="button">
+                            <span class="hamburger-box">
+                              <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+
+					
+					<p class="subtitle leading-arrow"><a name="project-ideas">Projects Ideas And Inspiration</a></p>
+                    Projects ideas and inspiration to start exploring the quantum computing technology ecosystem.
+                    <p>
+                        <ul style="list-style-type: none;">
+                        <li class="leading-block">
+						<a href="coins.html">Quantum Coins</a>: a Quantum Random Number Generator explained </li><br>
+                        <li class="leading-block"> 
+                            <a href="https://arxiv.org/abs/0708.1879">Solovay-Kitaev Algorithm</a>: approximating arbitrary single-qubit gates for fault-tolerant quantum computation </li>
+                        </ul>
+                    </p>
+
+                    <footer class="footer leading-arrow light-arrow">
+                        Powered by Qiskit, Qutip, Anaconda, Amazon Web Services<br>
+                        This website is hosted on <a href="https://github.com/unitaryfund/unitary-fund" target="_blank">github</a><br>
+                        Inspired by <a href="https://unitary.fund" target="_blank">Unitary Fund</a> ❤️
+                    </footer>
+                </div>
+                <div class="col-1" id="menu-container">
+					<br>
+                    <p class="light" id="menu">
+                        <a href="index.html" class="active">HOME</a>
+                        <a href="coins.html">QUANTUM_COINS</a>
+                        <a href="solovay_kitaev.html">SOLOVAY_KITAEV</a>
+                        <a href="contacts.html">CONTACTS</a> 
+                    </p>
+                </div>
+                <div id="mobile-menu-container">
+                    <p class="light" id="mobile-menu">
+                        <a href="index.html" class="active">HOME</a>
+                        <a href="coins.html">QUANTUM_COINS</a>
+                        <a href="solovay_kitaev.html">SOLOVAY_KITAEV</a>
+                        <a href="contacts.html">CONTACTS</a> 
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+<script>
+    var mobileMenuIcon = document.querySelector("#mobile-menu-icon")
+        mobileMenuContainer = document.querySelector("#mobile-menu-container");
+    mobileMenuIcon.addEventListener("click", function() {
+        mobileMenuIcon.classList.toggle("is-active");
+        mobileMenuContainer.classList.toggle("active");
+    });
+</script>
+</body>
+
+</html>

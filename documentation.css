@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+
+    /*****************/
+   /*               */
+  /*   Text CODE   */
+ /*               */
+/*****************/
+
+
+pre {
+
+	margin: 0.5rem 0;
+	max-width: 88%;
+	border-radius: 0.5rem;
+	background-color: hsl( 
+		
+		0,
+		0%,
+		93%
+	);
+	padding: 0  0 1.5rem 1rem;
+	white-space: pre;
+	word-wrap: normal;/*  iOS, you make me sad.  */
+	tab-size: 4;
+	-moz-tab-size: 4;
+	overflow: auto;
+	overflow-wrap: normal;
+}
+pre, code, samp {
+
+	font-family: var( --Q-font-family-mono );
+	line-height: 1.2rem;
+	color: hsl(
+
+		var( --Q-color-green-hue ),
+		80%,
+		25%
+	);
+}
+samp {
+	text-align: left;
+	color: hsl(
+
+		/*var( --Q-color-red-hue ),*/
+		265,
+		20%,
+		50%
+	);
+}
+pre code, pre samp {
+
+	margin:  0;
+	padding: 0;
+	white-space: pre;
+	word-wrap: normal;/*  iOS, you make me sad.  */
+	overflow: auto;
+	overflow-wrap: normal;
+}
+
