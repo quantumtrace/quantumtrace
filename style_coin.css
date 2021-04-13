@@ -3,7 +3,7 @@
 width: 100px;
 height: 100px;
 position: absolute;
-top: calc(22% - 0px);
+top: calc(20% - 0px);
 left: 28%;
 }
 
@@ -155,7 +155,7 @@ to { -webkit-transform: rotateY(2160deg); -moz-transform: rotateY(2160deg); tran
 width: 100px;
 height: 100px;
 position: absolute;
-top: calc(22% - 0px);
+top: calc(20% - 0px);
 left: 42%;
 }
 
