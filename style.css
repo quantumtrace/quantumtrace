@@ -365,7 +365,7 @@ img {
 
 #rect_back {
 	position: relative;
-	width: 81%;
+	width: 100%;
   background-color: hsl(
 
 		/*var( --Q-color-red-hue ),*/
