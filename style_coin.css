@@ -2,9 +2,9 @@
 #coin-flip-cont {
 width: 100px;
 height: 100px;
-position: absolute;
+position: inherit;
 top: calc(20% - 0px);
-left: 28%;
+margin-left: 50%;
 }
 
 #coin {
@@ -15,8 +15,8 @@ transform-style: preserve-3d;
 
 #coin .front, #coin .back {
 position: absolute;
-width: 9vh;
-height: 9vh;
+width: 66px;
+height: 66px;
 }
 
 #coin .front {
@@ -154,9 +154,9 @@ to { -webkit-transform: rotateY(2160deg); -moz-transform: rotateY(2160deg); tran
 #coin-flip-cont2 {
 width: 100px;
 height: 100px;
-position: absolute;
+position: inherit;
 top: calc(20% - 0px);
-left: 42%;
+margin-left: 60%;
 }
 
 #coin2 {
@@ -167,8 +167,8 @@ transform-style: preserve-3d;
 
 #coin2 .front2, #coin2 .back2 {
 position: absolute;
-width: 9vh;
-height: 9vh;
+width: 66px;
+height: 66px;
 }
 
 #coin2 .front2 {
@@ -223,4 +223,43 @@ animation: rotate1980 4s linear forwards;
 animation: rotate2160 4s linear forwards;
 }
 
+span.inlineblock {
+  display: inline-block;
+}
 
+/*
+@keyframes flickerAnimation {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-o-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+.animate-flicker {
+   -webkit-animation: flickerAnimation 4s infinite;
+   -moz-animation: flickerAnimation 4s infinite;
+   -o-animation: flickerAnimation 4s infinite;
+    animation: flickerAnimation 4s infinite;
+}
+*/
+
+@keyframes fadeIn { 
+  from { opacity: 0.25; } 
+}
+
+.animate-flicker {
+    animation: fadeIn 1.25s infinite alternate;
+}

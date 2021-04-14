@@ -20,7 +20,7 @@
 	
 	  <link rel="stylesheet" href="./style_coin.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
-    <link href="http://cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
     <style type="text/css">
         #mc_embed_signup{background:#fff; clear:left; font:14px "Lucida Console", Monaco, monospace; width:100%;}
         #mce-EMAIL{padding: 11px; margin: 10px;}
@@ -66,27 +66,33 @@
 			</div>
 			<div>
 
-					<br>
-					<br>
-					<div id="coin-flip-cont">
-						<div id="coin">
-							<div class="front"></div>
-							<div class="back"></div>
+						<p class="subtitle leading-arrow">Quantum Coins - A Quantum Random Number Generator</p>
+						<br>
+						
+
+						<span class="inlineblock">
+						<div id="coin-flip-cont">
+							<div id="coin">
+								<div class="front"></div>
+								<div class="back"></div>
+							</div>
 						</div>
-					</div>
-					
-					<div id="coin-flip-cont2">
-						<div id="coin2">
-							<div class="front2"></div>
-							<div class="back2"></div>
-						</div>
-					</div>
-					<i id="play" class="fa fa-play-circle-o" style="position: absolute;font-size:66px;color:#BB8BFF;left:56%;top:20%;z-index:1;"></i>
-					<br>
-					<br>
+						</span>
+						
+						<span class="inlineblock">
+						<div id="coin-flip-cont2">
+							<div id="coin2">
+								<div class="front2"></div>
+								<div class="back2"></div>
+							</div>
+						</div></span>
+						<span id="play" class="animate-flicker back2 front2 coin-flip-cont2 fa fa-play-circle-o" style="float:left;position:inherit;font-size:66px;color:#BB8BFF;z-index:1;"></span>
+						
+									
+
 					<p class="subtitle leading-arrow">Quantum Circuit</p>
 					<img id ="myimg" src="circuit2.png">
-					<p class="subtitle leading-arrow">Outcomes probabilities</p>
+					<p class="subtitle leading-arrow">Outcome probabilities</p>
 					<div id="rect_back">
 						<p id="p_prob" name="line1">|00⟩  ▮▮▮▮▮▮▮▮▮▮▯▯▯▯▯▯▯▯▯▯  25% </p>
 						<p id="p_prob" name="line2">|01⟩  ▮▮▮▮▮▮▮▮▮▮▯▯▯▯▯▯▯▯▯▯   25% <p/>
@@ -103,13 +109,14 @@
 
 					</div>
 					
-					<p class="subtitle leading-arrow">Tutorial: Quantum Randon Number Generator.</p>
-					<p>The first step is to initialiaze a 2 qubit quantum register and a 2 bit classical register.</p>
-					<p>Then we need to apply a Hadamard gate to all qubits. This gate put a qubit in to a superposition of 0 and 1 with equal probability.</p>
-					<p>After this we measure every qubit and this measurement will collapse the qubit to a 0 or a 1.</p>
+					<p class="subtitle leading-arrow">How it works</p>
+					<p>The first step is to initialiaze a 2 qubit quantum register (since we have 2 coins) and a 2 bit classical register (since we want to store 2 results, after the measurements). If we measured every qubit at this point, we'd find 100% the qubits to be in the composite state |00⟩.</p>
+					<p>Then we apply a Hadamard gate to all qubits. This gate put a qubit in to a superposition of 0 and 1 with equal probability. So the 2-qubit system has a 25% of probability to be in one of the possible states. They are 4, i.e. 2 (possible outcomes per coin) at the power of 2 (number of coins). They'd be 8, if we had three coins.</p>
+					<p>Then we measure every qubit and this measurement will collapse the qubit to either 1 or 0, which we store in the 2 classical registers.</p>
+					<p>As you can see, we need 3 lines of code to obtain this quantum random number generator. Of course, you'd need a few more lines to connect to a real quantum computer backend and execute the calculation, as you can see <a href="https://unitary.fund" target="_blank">here</a>.</p>
                     <footer class="footer leading-arrow light-arrow">
                         Powered by Qiskit, Qutip, Anaconda, Amazon Web Services<br>
-                        This website is hosted on <a href="https://github.com/unitaryfund/unitary-fund" target="_blank">github</a><br>
+                        This website is hosted on <a href="https://quantumtrace.github.io/quantumtrace/" target="_blank">github</a><br>
                         Inspired by <a href="https://unitary.fund" target="_blank">Unitary Fund</a> ❤️
                     </footer>
 
