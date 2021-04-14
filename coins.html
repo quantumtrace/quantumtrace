@@ -66,7 +66,7 @@
 			</div>
 			<div>
 
-						<p class="subtitle leading-arrow">Quantum Coins - Press play to to flip the coins</p>				
+						<p class="subtitle leading-arrow">Quantum Coins - Press Play To Flip The Coins</p>				
 
 						<span class="inlineblock">
 						<div id="coin-flip-cont">
@@ -88,7 +88,7 @@
 					
 					<p class="subtitle leading-arrow">Quantum Circuit</p>
 					<img id ="myimg" src="circuit2.png">
-					<p class="subtitle leading-arrow">Outcome probabilities</p>
+					<p class="subtitle leading-arrow">Outcome Probabilities</p>
 					<div id="rect_back">
 						<p id="p_prob" name="line1">|00⟩  ▮▮▮▮▮▮▮▮▮▮▯▯▯▯▯▯▯▯▯▯  25% </p>
 						<p id="p_prob" name="line2">|01⟩  ▮▮▮▮▮▮▮▮▮▮▯▯▯▯▯▯▯▯▯▯   25% <p/>
@@ -96,7 +96,7 @@
 						<p id="p_prob" name="line4">|11⟩  ▮▮▮▮▮▮▮▮▮▮▯▯▯▯▯▯▯▯▯▯  25% </p>
 					</div>
 					
-					<p class="subtitle leading-arrow">Qiskit implementation</p>
+					<p class="subtitle leading-arrow">Qiskit Implementation</p>
 					<div id="rect_back">
 					
 						<p id="p_prob" name="code1">circuit = QuantumCircuit(<span name="char1">2</span>, <span name="char2">2</span>)</p>
@@ -105,7 +105,7 @@
 
 					</div>
 					
-					<p class="subtitle leading-arrow">How it works - A Quantum Random Number Generator </p>
+					<p class="subtitle leading-arrow">How It Works - A Quantum Random Number Generator </p>
 					<p>The first step is to initialiaze a 2 qubit quantum register (since we have 2 coins) and a 2 bit classical register (since we want to store 2 results, after the measurements). If we measured every qubit at this point, we'd find 100% the qubits to be in the composite state |00⟩.</p>
 					<p>Then we apply a Hadamard gate to all qubits. This gate put a qubit in to a superposition of 0 and 1 with equal probability. So the 2-qubit system has a 25% of probability to be in one of the possible states. They are 4, i.e. 2 (possible outcomes per coin) at the power of 2 (number of coins). They'd be 8, if we had three coins.</p>
 					<p>Then we measure every qubit and this measurement will collapse the qubit to either 1 or 0, which we store in the 2 classical registers.</p>
