@@ -66,7 +66,7 @@
 			</div>
 			<div>
 
-						<p class="subtitle leading-arrow">Quantum Coins - A Quantum Random Number Generator</p>				
+						<p class="subtitle leading-arrow">Quantum Coins - Press play to to flip the coins</p>				
 
 						<span class="inlineblock">
 						<div id="coin-flip-cont">
@@ -105,12 +105,15 @@
 
 					</div>
 					
-					<p class="subtitle leading-arrow">How it works</p>
+					<p class="subtitle leading-arrow">How it works - A Quantum Random Number Generator </p>
 					<p>The first step is to initialiaze a 2 qubit quantum register (since we have 2 coins) and a 2 bit classical register (since we want to store 2 results, after the measurements). If we measured every qubit at this point, we'd find 100% the qubits to be in the composite state |00⟩.</p>
 					<p>Then we apply a Hadamard gate to all qubits. This gate put a qubit in to a superposition of 0 and 1 with equal probability. So the 2-qubit system has a 25% of probability to be in one of the possible states. They are 4, i.e. 2 (possible outcomes per coin) at the power of 2 (number of coins). They'd be 8, if we had three coins.</p>
 					<p>Then we measure every qubit and this measurement will collapse the qubit to either 1 or 0, which we store in the 2 classical registers.</p>
-					<p>As you can see, we need 3 lines of code to obtain this quantum random number generator. Of course, you'd need a few more lines to connect to a real quantum computer backend and execute the calculation, as you can see <a href="https://unitary.fund" target="_blank">here</a>.</p>
-                    <footer class="footer leading-arrow light-arrow">
+					
+                    
+					<p class="subtitle leading-arrow">Run It On A Real Quantum Device</p>
+					<p>Execute your quantum random number generator on a real quantum device. <a href="https://github.com/quantumtrace/quantum-coins" target="_blank">Here is the code</a>.</p>
+					<footer class="footer leading-arrow light-arrow">
                         Powered by Qiskit, Qutip, Anaconda, Amazon Web Services<br>
                         This website is hosted on <a href="https://quantumtrace.github.io/quantumtrace/" target="_blank">github</a><br>
                         Inspired by <a href="https://unitary.fund" target="_blank">Unitary Fund</a> ❤️
