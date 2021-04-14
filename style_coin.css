@@ -1,7 +1,7 @@
 @charset "UTF-8";
 #coin-flip-cont {
-width: 100px;
-height: 100px;
+width: 66px;
+height: 66px;
 position: inherit;
 top: calc(20% - 0px);
 margin-left: 50%;
@@ -152,8 +152,8 @@ to { -webkit-transform: rotateY(2160deg); -moz-transform: rotateY(2160deg); tran
 }
 
 #coin-flip-cont2 {
-width: 100px;
-height: 100px;
+width: 66px;
+height: 66px;
 position: inherit;
 top: calc(20% - 0px);
 margin-left: 60%;
