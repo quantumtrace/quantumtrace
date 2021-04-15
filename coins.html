@@ -88,13 +88,6 @@
 					
 					<p class="subtitle leading-arrow">Quantum Circuit</p>
 					<img id ="myimg" src="circuit2.png">
-					<p class="subtitle leading-arrow">Outcome Probabilities</p>
-					<div id="rect_back">
-						<p id="p_prob" name="line1">|00⟩  ▮▮▮▮▮▮▮▮▮▮▯▯▯▯▯▯▯▯▯▯  25% </p>
-						<p id="p_prob" name="line2">|01⟩  ▮▮▮▮▮▮▮▮▮▮▯▯▯▯▯▯▯▯▯▯   25% <p/>
-						<p id="p_prob" name="line3">|10⟩  ▮▮▮▮▮▮▮▮▮▮▯▯▯▯▯▯▯▯▯▯   25% <p/>
-						<p id="p_prob" name="line4">|11⟩  ▮▮▮▮▮▮▮▮▮▮▯▯▯▯▯▯▯▯▯▯  25% </p>
-					</div>
 					
 					<p class="subtitle leading-arrow">Qiskit Implementation</p>
 					<div id="rect_back">
@@ -105,6 +98,15 @@
 
 					</div>
 					
+					<p class="subtitle leading-arrow">Outcome Probabilities</p>
+					<div id="rect_back">
+						<p id="p_prob" name="line1">|00⟩  ▮▮▮▮▮▮▮▮▮▮▯▯▯▯▯▯▯▯▯▯  25% </p>
+						<p id="p_prob" name="line2">|01⟩  ▮▮▮▮▮▮▮▮▮▮▯▯▯▯▯▯▯▯▯▯   25% <p/>
+						<p id="p_prob" name="line3">|10⟩  ▮▮▮▮▮▮▮▮▮▮▯▯▯▯▯▯▯▯▯▯   25% <p/>
+						<p id="p_prob" name="line4">|11⟩  ▮▮▮▮▮▮▮▮▮▮▯▯▯▯▯▯▯▯▯▯  25% </p>
+					</div>
+					
+					
 					<p class="subtitle leading-arrow">How It Works - A Quantum Random Number Generator </p>
 					<p>The first step is to initialiaze a 2 qubit quantum register (since we have 2 coins) and a 2 bit classical register (since we want to store 2 results, after the measurements). If we measured every qubit at this point, we'd find 100% the qubits to be in the composite state |00⟩.</p>
 					<p>Then we apply a Hadamard gate to all qubits. This gate put a qubit in to a superposition of 0 and 1 with equal probability. So the 2-qubit system has a 25% of probability to be in one of the possible states. They are 4, i.e. 2 (possible outcomes per coin) at the power of 2 (number of coins). They'd be 8, if we had three coins.</p>
@@ -112,7 +114,33 @@
 					
                     
 					<p class="subtitle leading-arrow">Run It On A Real Quantum Device</p>
-					<p>Execute your quantum random number generator on a real quantum device. <a href="https://github.com/quantumtrace/quantum-coins" target="_blank">Here is the code</a>.</p>
+					<p>Execute your quantum random number generator code on a real quantum device. <a href="https://github.com/quantumtrace/quantum-coins" target="_blank">Here is the GitHub repository</a>.</p>
+<!-- HTML generated using hilite.me --><span class ="reset-this"><div style="font-size: 13px; background: #ffffff; overflow:auto;width:auto;border:solid #6929C4;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">#Code to run a quantum random number generator on a real quantum device.</span>
+<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">qiskit</span> <span style="color: #008800; font-weight: bold">import</span> QuantumCircuit, IBMQ, execute
+
+<span style="color: #888888">#Authenticate an account and add for use during this session.</span>
+IBMQ<span style="color: #333333">.</span>enable_account(<span style="background-color: #ffffff">&#39;YOUR_API_TOKEN&#39;</span>)
+provider <span style="color: #333333">=</span> IBMQ<span style="color: #333333">.</span>get_provider(hub<span style="color: #333333">=</span><span style="background-color: #ffffff">&#39;ibm-q&#39;</span>)
+
+<span style="color: #888888">#Initialize the number of qubits and classical registers</span>
+number <span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">3</span>
+circuit <span style="color: #333333">=</span> QuantumCircuit(number, number)
+
+<span style="color: #888888">#Apply an hadamard gate to every qubits</span>
+circuit<span style="color: #333333">.</span>h(<span style="color: #007020">range</span>(number))
+
+<span style="color: #888888">#Measure every qubits</span>
+circuit<span style="color: #333333">.</span>measure(<span style="color: #007020">range</span>(number), <span style="color: #007020">range</span>(number))
+
+<span style="color: #888888"># Set the quantum device and execute the quantum circuit</span>
+backend <span style="color: #333333">=</span> provider<span style="color: #333333">.</span>get_backend(<span style="background-color: #ffffff">&#39;ibmq_belem&#39;</span>)
+job <span style="color: #333333">=</span> execute(circuit, backend, shots<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">1</span>)
+
+<span style="color: #888888">#Get and print results</span>
+result <span style="color: #333333">=</span> job<span style="color: #333333">.</span>result()
+<span style="color: #008800; font-weight: bold">print</span>(result<span style="color: #333333">.</span>get_counts())
+</pre></div></span>
+
 					<footer class="footer leading-arrow light-arrow">
                         Powered by Qiskit, Qutip, Anaconda, Amazon Web Services<br>
                         This website is hosted on <a href="https://quantumtrace.github.io/quantumtrace/" target="_blank">github</a><br>
