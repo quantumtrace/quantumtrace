@@ -115,25 +115,31 @@
                     
 					<p class="subtitle leading-arrow">Run It On A Real Quantum Device</p>
 					<p>Execute your quantum random number generator code on a real quantum device. <a href="https://github.com/quantumtrace/quantum-coins" target="_blank">Here is the GitHub repository</a>.</p>
-<!-- HTML generated using hilite.me --><span class ="reset-this"><div style="font-size: 13px; background: #ffffff; overflow:auto;width:auto;border:solid #6929C4;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">#Code to run a quantum random number generator on a real quantum device.</span>
-<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">qiskit</span> <span style="color: #008800; font-weight: bold">import</span> QuantumCircuit, IBMQ, execute
+<!-- HTML generated using hilite.me --><span class ="reset-this"><div style="font-size: 13px; background: #ffffff; overflow:auto;width:auto;border:solid #6929C4;border-width:.1em .1em .1em .4em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">
+<span style="color: #888888">#Import Qiskit module</span>
+<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">qiskit</span> <span style="color: #008800; font-weight: bold">import</span> QuantumCircuit
+<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">qiskit</span> <span style="color: #008800; font-weight: bold">import</span>IBMQ, execute
 
-<span style="color: #888888">#Authenticate an account and add for use during this session.</span>
+<span style="color: #888888">#Authenticate your account.</span>
 IBMQ<span style="color: #333333">.</span>enable_account(<span style="background-color: #ffffff">&#39;YOUR_API_TOKEN&#39;</span>)
+
+<span style="color: #888888">#Set up a provider.</span>
 provider <span style="color: #333333">=</span> IBMQ<span style="color: #333333">.</span>get_provider(hub<span style="color: #333333">=</span><span style="background-color: #ffffff">&#39;ibm-q&#39;</span>)
 
-<span style="color: #888888">#Initialize the number of qubits and classical registers</span>
-number <span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">3</span>
-circuit <span style="color: #333333">=</span> QuantumCircuit(number, number)
+<span style="color: #888888">#Initialize qubits, classical registers</span>
+number <span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold"> 3</span>
+circuit <span style="color: #333333">=</span> QuantumCircuit(number,number)
 
-<span style="color: #888888">#Apply an hadamard gate to every qubits</span>
+<span style="color: #888888">#Apply an hadamard gate to every qubit</span>
 circuit<span style="color: #333333">.</span>h(<span style="color: #007020">range</span>(number))
 
 <span style="color: #888888">#Measure every qubits</span>
-circuit<span style="color: #333333">.</span>measure(<span style="color: #007020">range</span>(number), <span style="color: #007020">range</span>(number))
+circuit<span style="color: #333333">.</span>measure(<span style="color: #007020">range</span>(number),<span style="color: #007020">range</span>(number))
 
-<span style="color: #888888"># Set the quantum device and execute the quantum circuit</span>
+<span style="color: #888888">#Set the real quantum device</span>
 backend <span style="color: #333333">=</span> provider<span style="color: #333333">.</span>get_backend(<span style="background-color: #ffffff">&#39;ibmq_belem&#39;</span>)
+
+<span style="color: #888888">#Run the job on the quantum device</span>
 job <span style="color: #333333">=</span> execute(circuit, backend, shots<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">1</span>)
 
 <span style="color: #888888">#Get and print results</span>
