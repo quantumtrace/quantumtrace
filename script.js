@@ -53,7 +53,7 @@ $('[name="char1"]').addClass('highlight_char');
 setTimeout(function(){
 $('[name="char1"]').removeClass();
 $('[name="char2"]').addClass('highlight_char');
-}, 1200);
+}, 1000);
 
 setTimeout(function(){
 $('[name="line1"]').text("|00⟩  ▮▮▮▮▮▮▮▮▮▮▯▯▯▯▯▯▯▯▯▯  25% ");
@@ -63,7 +63,7 @@ $('[name="line4"]').text("|11⟩  ▮▮▮▮▮▮▮▮▮▮▯▯▯▯▯�
 $('[name="code1"]').removeClass();
 $('[name="char2"]').removeClass();
 $('[name="code2"]').addClass('highlight_text');
-}, 2600);
+}, 2800);
 
 setTimeout(function(){
 const states = ['00','01','10','11'];
