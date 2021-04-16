@@ -63,7 +63,7 @@ $('[name="line4"]').text("|11⟩  ▮▮▮▮▮▮▮▮▮▮▯▯▯▯▯�
 $('[name="code1"]').removeClass();
 $('[name="char2"]').removeClass();
 $('[name="code2"]').addClass('highlight_text');
-}, 3000);
+}, 2700);
 
 setTimeout(function(){
 const states = ['00','01','10','11'];
@@ -86,7 +86,7 @@ $('[name="line3"]').text(lines[2]);
 $('[name="line4"]').text(lines[3]);
 $('[name="code2"]').removeClass();
 $('[name="code3"]').addClass('highlight_text');
-}, 4000);
+}, 4150);
 
 });
 
