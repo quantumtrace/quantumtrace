@@ -127,14 +127,14 @@ IBMQ<span style="color: #333333">.</span>enable_account(<span style="background-
 provider <span style="color: #333333">=</span> IBMQ<span style="color: #333333">.</span>get_provider(hub<span style="color: #333333">=</span><span style="background-color: #ffffff">&#39;ibm-q&#39;</span>)
 
 <span style="color: #888888">#Initialize qubits, classical registers</span>
-number <span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold"> 3</span>
-circuit <span style="color: #333333">=</span> QuantumCircuit(number,number)
+n <span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold"> 3</span>
+circuit <span style="color: #333333">=</span> QuantumCircuit(n,n)
 
 <span style="color: #888888">#Apply an hadamard gate to every qubit</span>
-circuit<span style="color: #333333">.</span>h(<span style="color: #007020">range</span>(number))
+circuit<span style="color: #333333">.</span>h(<span style="color: #007020">range</span>(n))
 
 <span style="color: #888888">#Measure every qubits</span>
-circuit<span style="color: #333333">.</span>measure(<span style="color: #007020">range</span>(number),<span style="color: #007020">range</span>(number))
+circuit<span style="color: #333333">.</span>measure(<span style="color: #007020">range</span>(n),<span style="color: #007020">range</span>(n))
 
 <span style="color: #888888">#Set the real quantum device</span>
 backend <span style="color: #333333">=</span> provider<span style="color: #333333">.</span>get_backend(<span style="background-color: #ffffff">&#39;ibmq_belem&#39;</span>)
